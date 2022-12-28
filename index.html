@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <div id="logo">
+    <img src="images/logo.svg" alt="">
+  </div>
+  <div class="container">
+    <!-- <div class="container-x"> -->
+    <div class="first-form">
+      <h3>Bill</h3>
+      <form action="">
+        <span class="dollar-sign" style="position: absolute; margin-left: 1px;"><img src="images/icon-dollar.svg"
+            alt=""></span>
+        <input type="text" name="" id="" style="direction: RTL" placeholder="0">
+      </form>
+    </div>
+    <!-- Select tip -->
+    <h3>Select Tip %</h3>
+    <div class="container-grid">
+      <div class="tip-box">5%</div>
+      <div class="tip-box">10%</div>
+      <div class="tip-box">15%</div>
+      <div class="tip-box">25%</div>
+      <div class="tip-box">50%</div>
+      <div class="tip-box">Custom</div>
+    </div>
+    <!--  -->
+    <div class="second-form">
+      <h3>Number of People</h3>
+      <form action="">
+        <span class="dollar-sign" style="position: absolute; margin-left: 1px;"><img src="images/icon-person.svg"
+            alt=""></span>
+        <input type="text" name="" id="" style="direction: RTL" placeholder="0">
+      </form>
+    </div>
+    <!--  -->
+    <div class="main">
+      <!--  -->
+      <div class="main1">
+        <div class="tip-main">
+          <h4>Tip Amount</h4>
+          <p>/person</p>
+        </div>
+        <h1 class="tip-no"><img src="images/icon-dollar.svg" alt="">0.00</h1>
+      </div>
+      <!--  -->
+      <div class="main2">
+        <div class="tip-main">
+          <h4>Total</h4>
+          <p>/person</p>
+        </div>
+        <h1 class="tip-no"><img src="images/icon-dollar.svg" alt="">0.00</h1>
+      </div>
+      <button id="reset-button">RESET</button>
+    </div>
+    <!-- </div> -->
+  </div>
+</body>
+
+</html>
