@@ -54,6 +54,9 @@ body {
         border-radius: 5px;
         /* padding: 10px; */
         text-align: right;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        color:  hsl(183, 100%, 15%);;
     }
 
     input:focus {
@@ -69,7 +72,8 @@ body {
         margin: 5px 0px 0px 3px;
         font-size: 20px;
     }
-/* ----CONTAINER GRID------ */
+
+    /* ----CONTAINER GRID------ */
     .container-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
