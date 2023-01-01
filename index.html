@@ -24,26 +24,30 @@
       <form action="">
         <span class="dollar-sign" style="position: absolute; margin-left: 1px;"><img src="images/icon-dollar.svg"
             alt=""></span>
-        <input type="text" name="" id="bill" style="direction: RTL" placeholder="0">
+        <input type="text" name="" id="bill" style="direction: RTL" placeholder="0" onblur="get()">
       </form>
     </div>
     <!-- Select tip -->
     <h3>Select Tip %</h3>
     <div class="container-grid">
-      <div class="tip-box">5%</div>
-      <div class="tip-box">10%</div>
-      <div class="tip-box">15%</div>
-      <div class="tip-box">25%</div>
-      <div class="tip-box">50%</div>
-      <div class="tip-box">Custom</div>
+      <div class="tip-box">5<span>%</span></div>
+      <div class="tip-box">10<span>%</span></div>
+      <div class="tip-box">15<span>%</span></div>
+      <div class="tip-box">25<span>%</span></div>
+      <div class="tip-box">50<span>%</span></div>
+      <!-- <div class="tip-box">custom</div> -->
+      <input type="number" name="" class="custom-box" style="direction: RTL" placeholder="custom" onblur="cut()">
     </div>
     <!--  -->
     <div class="second-form">
-      <h3>Number of People</h3>
+      <div class="no">
+        <p>Number of People</p>
+        <p class="zero hidden">can't be zero</p>
+      </div>
       <form action="">
         <span class="dollar-sign" style="position: absolute; margin-left: 1px;"><img src="images/icon-person.svg"
             alt=""></span>
-        <input type="text" name="" id="number" style="direction: RTL" placeholder="0">
+        <input type="text" name="" id="number" style="direction: RTL" placeholder="0" onblur="set()">
       </form>
     </div>
     <!--  -->
@@ -52,25 +56,31 @@
       <div class="main1">
         <div class="tip-main">
           <h4>Tip Amount</h4>
-          <p>/person</p>
+          <p>/ person</p>
         </div>
-        <h1 class="tip-no"><img src="images/icon-dollar.svg" alt="">0.00</h1>
+        <div class="d-No">
+          <img class="dollar" src="images/icon-dollar.svg" alt="">
+          <h1 class="tip">0.00</h1>
+        </div>
       </div>
       <!--  -->
       <div class="main2">
         <div class="tip-main">
           <h4>Total</h4>
-          <p>/person</p>
+          <p>/ person</p>
         </div>
-        <h1 class="tip-no"><img src="images/icon-dollar.svg" alt="">0.00</h1>
+        <div class="d-No">
+          <img class="dollar" src="images/icon-dollar.svg" alt="">
+          <h1 class="total">0.00</h1>
+        </div>
       </div>
-      <button id="reset-button">RESET</button>
+      <button class="reset-button opa">RESET</button>
     </div>
     <!-- </div> -->
   </div>
   <!-- -----script----- -->
-  
-<script src="index.js></script>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
