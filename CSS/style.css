@@ -9,11 +9,213 @@
 
 body {
     background-color: hsl(185, 41%, 84%);
-    /* height: 100vh; */
-    height: 100vh;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+    max-width: 100%;
 }
+
+#logo {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container {
+    /* display: flex; */
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 40px;
+    /* justify-content: center; */
+    margin: 7% auto;
+    padding: 20px 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    width: 50%;
+}
+
+
+.second-section {
+    background-color: hsl(183, 100%, 15%);
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-content: space-between; */
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+/* -------DESKTOP------ */
+
+/* .container-x { */
+/* height: 100vh; */
+/* max-height: 100vh; */
+/* } */
+
+/* ---------FORM----------- */
+.first-form,
+.second-form {
+    /* margin-top: 23px; */
+}
+
+input[type="number"] {
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: hsl(189, 41%, 97%);
+    outline: none;
+    border-radius: 5px;
+    /* padding: 10px; */
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+
+input:focus {
+    border: 2px solid hsl(184, 14%, 56%);
+}
+
+
+input::-webkit-input-placeholder {
+    /* text-align: right; */
+}
+
+.dollar-sign {
+    margin: 5px 0px 0px 3px;
+    font-size: 20px;
+}
+
+.dollar {
+    width: 20px;
+    height: 20px;
+    /* color:  hsl(183, 100%, 15%); */
+}
+
+.no {
+    display: flex;
+    justify-content: space-between;
+}
+
+.zero {
+    color: red;
+    /* display: none; */
+}
+
+.hidden {
+    display: none;
+}
+
+#red-border {
+    border: 2px solid red;
+}
+
+/* ----CONTAINER GRID------ */
+.container-grid {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.tip-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 40px;
+    /* width: 50px; */
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+}
+
+.tip-box:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+
+/* input[type="number"] { */
+/* height: 100%; */
+/* background-color: hsl(189, 41%, 97%); */
+/* border-radius: 5px; */
+/* border: none; */
+/* outline: none; */
+/* } */
+
+
+/* input[type="number"]:focus { */
+/* border: 2px solid hsl(184, 14%, 56%); */
+/* } */
+/*  */
+/* input[type="number"]:hover {} */
+
+
+/* input[type="number"]::-webkit-input-placeholder { */
+/* background-color: hsl(185, 41%, 84%); */
+/* color: hsl(183, 100%, 15%); */
+/* text-align: center; */
+/* height: 100%; */
+/* height: 100%; */
+/* width: 100%; */
+/* } */
+/*  */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tip-main {
+    color: white;
+}
+
+
+.tip,
+.total {
+    color: hsl(172, 67%, 45%);
+}
+
+.d-No {
+    display: flex;
+    align-items: center;
+}
+
+/* ----MAIN--- */
+.main {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-content: space-between; */
+    /* background-color: hsl(183, 100%, 15%); */
+    /* border-radius: 10px; */
+    /* padding: 30px 20px; */
+}
+
+.main1,
+.main2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+
+.reset-button {
+    width: 100%;
+    height: 40px;
+    /* margin-bottom: 30px; */
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    border-radius: 5px;
+    margin-top: 80px;
+}
+
+.opa {
+    opacity: 0.3;
+}
+
+
+
+
+
 
 @media only screen and (max-width: 780px) {
     #logo {
@@ -25,12 +227,19 @@ body {
     .container {
         background-color: hsl(0, 0%, 100%);
         border-top-left-radius: 20px;
+        margin: 0% 0;
+        display: grid;
+        grid-template: 1fr/ 1fr;
         border-top-right-radius: 20px;
         padding: 20px 30px 0px 30px;
+        width: initial;
         /* margin-top: 20px; */
         /* height: 100vh; */
-        height: 100%;
+        /* height: 100%; */
+        /* min-height: 100vh; */
     }
+
+
 
     /* .container-x { */
     /* height: 100vh; */
@@ -43,7 +252,7 @@ body {
         margin-top: 23px;
     }
 
-    input[type="text"] {
+    input[type="number"] {
         height: 40px;
         width: 100%;
         border: none;
@@ -86,20 +295,21 @@ body {
 
     .zero {
         color: red;
+        /* display: none; */
     }
 
     .hidden {
         display: none;
     }
 
-    .red-border {
+    #red-border {
         border: 2px solid red;
     }
 
     /* ----CONTAINER GRID------ */
     .container-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
         gap: 10px;
     }
 
@@ -118,30 +328,31 @@ body {
         background-color: hsl(172, 67%, 45%);
     }
 
-    input[type="number"] {
-        /* height: 100%; */
-        background-color: hsl(189, 41%, 97%);
-        border-radius: 5px;
-        border: none;
-        outline: none;
-    }
+    /* input[type="number"] { */
+    /* height: 100%; */
+    /* background-color: hsl(189, 41%, 97%); */
+    /* border-radius: 5px; */
+    /* border: none; */
+    /* outline: none; */
+    /* } */
 
-    input[type="number"]:focus {
-        border: 2px solid hsl(184, 14%, 56%);
-    }
 
-    input[type="number"]:hover{
+    /* input[type="number"]:focus { */
+    /* border: 2px solid hsl(184, 14%, 56%); */
+    /* } */
+    /*  */
+    /* input[type="number"]:hover {} */
 
-    }
 
-    input[type="number"]::-webkit-input-placeholder {
-        /* background-color: hsl(185, 41%, 84%); */
-        color: hsl(183, 100%, 15%);
-        text-align: center;
-        /* height: 100%; */
-        height: 100%;
-        width: 100%;
-    }
+    /* input[type="number"]::-webkit-input-placeholder { */
+    /* background-color: hsl(185, 41%, 84%); */
+    /* color: hsl(183, 100%, 15%); */
+    /* text-align: center; */
+    /* height: 100%; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* } */
+    /*  */
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

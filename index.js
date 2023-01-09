@@ -8,15 +8,15 @@ const total = document.querySelector(".total");
 const reset = document.querySelector(".reset-button");
 const zero = document.querySelector(".zero");
 const custom = document.querySelector(".custom-box");
-
-
+// const redBorder = document.querySelector(".red-border");
 
 function get() {
     if (bill.value == "") {
         console.log("Input a number")
     }
-    else if(number.value !== "") {
+    else if (number.value !== "") {
         reset.classList.remove("opa");
+        zero.classList.add("zero");
         tipclick();
         // console.log(bill.value)
         console.log("cant calculate")
@@ -27,12 +27,14 @@ function get() {
 function set() {
     if (number.value == "" || number.value == "0") {
         // console.log("Input a number")
-        zero.classList.remove("hidden")
-        number.classList.add("red-border")
+        zero.classList.remove("hidden");
+        number.setAttribute("id", "red-border")
 
     }
-    else if(bill.value !== ""){
+    else if (bill.value !== "") {
         tipclick();
+        zero.classList.add("red");
+        reset.classList.remove("opa");
         // console.log(number.value)
         // calculate()
     }
@@ -67,7 +69,7 @@ const tipclick = function () {
 
 function cut() {
     console.log(custom.value)
-    
+
 }
 
 reset.addEventListener("click", () => {
@@ -75,7 +77,8 @@ reset.addEventListener("click", () => {
     number.value = 0;
     total.textContent = "0.00";
     tip.textContent = "0.00";
-    zero.classList.remove("zero")
+    zero.classList.add("hidden");
+    number.removeAttribute("id", "red-border");
 })
 
 
